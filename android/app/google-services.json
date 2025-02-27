@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "285032167093",
+    "project_id": "fir-first-testing-dc322",
+    "storage_bucket": "fir-first-testing-dc322.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285032167093:android:cc44d8d09091249061b0fc",
+        "android_client_info": {
+          "package_name": "com.example.firebase_first_testing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTepYlDoF1uu8Fssu5KvIyquUotjGjmYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
