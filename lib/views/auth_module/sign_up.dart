@@ -81,11 +81,11 @@ class _SignUpState extends State<SignUp> {
                     isLoading = true;
                   });
                   try{
-                    final response = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                    UserCredential response = await FirebaseAuth.instance.createUserWithEmailAndPassword(
                         email: _emailController.text.trim(),
                         password: _passwordController.text.trim());
                     if(response.user != null){
-                      print('Response ---------------->${response.user}');
+                      print('Response ---------------->${response.user!.uid}');
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('User Already exists!')));
                     }else{
                       Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
@@ -126,7 +126,7 @@ class _SignUpState extends State<SignUp> {
                 child: RichText(
                     text: TextSpan(
                     children: [
-                    TextSpan(text: 'Do you have an account? ',style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w500)),
+                    TextSpan(text: ' Do you have an account? ',style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.black87)),
                     TextSpan(text: "Login",style: GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize: 17,color: Colors.red ))
                   ]
                 )),
