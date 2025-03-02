@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_first_testing/views/screens/chat_module/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,13 +26,13 @@ class _SignUp2State extends State<SignUp2> {
   // Collection
   Future<void> fireBaseCollection(String userid) async{
     try{
-      await FirebaseFirestore.instance.collection('currentUsers').doc(userid).set(
+      var result = await FirebaseFirestore.instance.collection('currentUsers').doc(userid).set(
           {
             'firstName' : firstNameController.text,
             'lastName' : lastNameController.text,
             'email' : emailController.text,
-            /*'password' : passwordController.text,
-            'confirmPassword':confirmPasswordController.text,*/
+            'password' : passwordController.text,
+            'confirmPassword':confirmPasswordController.text,
           }
       );
       print("User saved successfully!");
@@ -201,6 +202,7 @@ class _SignUp2State extends State<SignUp2> {
                             password: passwordController.text.trim());
                         print('Response ---------------->${response.user!.uid}');
                         await fireBaseCollection(response.user!.uid);
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreenChat()));
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Account created Successfully')));
                         setState(() {
                           isLoading = false;

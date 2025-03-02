@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_first_testing/views/auth_module/home_screen.dart';
-import 'package:firebase_first_testing/views/auth_module/log_in.dart';
+import 'package:firebase_first_testing/views/screens/auth_module/home_screen.dart';
+import 'package:firebase_first_testing/views/screens/auth_module/log_in.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

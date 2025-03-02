@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_first_testing/views/auth_module/sign_up2.dart';
+import 'package:firebase_first_testing/views/screens/auth_module/home_screen.dart';
+import 'package:firebase_first_testing/views/screens/auth_module/sign_up2.dart';
+import 'package:firebase_first_testing/views/screens/chat_module/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_first_testing/views/auth_module/sign_up.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +35,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SignUp2()
+      home: SignUp2(),
+      //HomeScreenChat()
+      //SignUp2()
       //SignUp(),
     );
   }
