@@ -1,3 +1,4 @@
+import 'package:firebase_first_testing/views/components/reuse_icon_and_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -79,7 +80,6 @@ class _ProfileChatScreenState extends State<ProfileChatScreen> {
           ReuseWidget(title: 'Contact', icon: Icons.contact_mail_outlined),
           SizedBox(height: 15,),
           ReuseWidget(title: 'Logout', icon: Icons.login),
-          
         ],
       ),
     );

@@ -2,7 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_first_testing/views/screens/auth_module/home_screen.dart';
 import 'package:firebase_first_testing/views/screens/auth_module/sign_up2.dart';
 import 'package:firebase_first_testing/views/screens/chat_module/home_screen.dart';
+import 'package:firebase_first_testing/views/screens/screen_utils/screen_utils_screen.dart';
+import 'package:firebase_first_testing/views/screens/splash_screen/chat_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,17 +31,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Firebase Web',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Firebase Web',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home:ScreenUtilsScreen()
+        //ChatSplashScreen(),
+        //SignUp2(),
+        //HomeScreenChat()
+        //SignUp2()
+        //SignUp(),
       ),
-      home: SignUp2(),
-      //HomeScreenChat()
-      //SignUp2()
-      //SignUp(),
     );
   }
 }
