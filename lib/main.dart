@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_first_testing/controllers/provider/signup_provider.dart';
 import 'package:firebase_first_testing/views/screens/auth_module/home_screen.dart';
 import 'package:firebase_first_testing/views/screens/auth_module/sign_up2.dart';
 import 'package:firebase_first_testing/views/screens/chat_module/home_screen.dart';
@@ -6,6 +7,7 @@ import 'package:firebase_first_testing/views/screens/screen_utils/screen_utils_s
 import 'package:firebase_first_testing/views/screens/splash_screen/chat_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +25,13 @@ void main() async {
     ),
   );*/
 
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(providers: [
+      ChangeNotifierProvider(create: (context) => SignupProvider())
+    ],
+        child: MyApp()),
+    );
+
 }
 
 class MyApp extends StatelessWidget {
