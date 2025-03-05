@@ -85,6 +85,17 @@ class _ScreenUtilsScreenState extends State<ScreenUtilsScreen> {
                 CustomizeTextfield(hintText: 'Enter last Name', labelText: 'Last Name', iconData: CupertinoIcons.person),
                 SizedBox(height: 10.h,),
                 CustomizeTextfield(hintText: 'Enter your email', labelText: 'Email', iconData: Icons.email),*/
+                  GestureDetector(
+                    onTap: ()async{
+                      await value.SignOutAccount();
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:Text('Logout Successfully!')));
+                    },
+                    child: Align(
+                      alignment: Alignment.topRight,
+                        child: Text('Log out?',style: GoogleFonts.poppins(
+                          fontSize: 18,fontWeight: FontWeight.w500
+                        ),)),
+                  ),
 
                   TextFormField(
                     keyboardType: TextInputType.emailAddress,
@@ -128,8 +139,7 @@ class _ScreenUtilsScreenState extends State<ScreenUtilsScreen> {
                           fontWeight: FontWeight.w600,
                           color: Colors.white),)),
                     ),
-                  )
-
+                  ),
 
                 ],
               );

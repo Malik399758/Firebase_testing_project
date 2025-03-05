@@ -15,4 +15,13 @@ class SignupProvider extends ChangeNotifier{
       print(e.message);
     }
   }
+
+  Future<void> SignOutAccount()async{
+    try{
+      await FirebaseAuth.instance.signOut();
+      notifyListeners();
+    }on FirebaseAuthException catch(e){
+      print('error ---------->${e.message}');
+    }
+  }
 }

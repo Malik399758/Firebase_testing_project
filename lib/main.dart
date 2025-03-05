@@ -3,6 +3,7 @@ import 'package:firebase_first_testing/controllers/provider/signup_provider.dart
 import 'package:firebase_first_testing/views/screens/auth_module/home_screen.dart';
 import 'package:firebase_first_testing/views/screens/auth_module/sign_up2.dart';
 import 'package:firebase_first_testing/views/screens/chat_module/home_screen.dart';
+import 'package:firebase_first_testing/views/screens/login_logout/login_and_logout.dart';
 import 'package:firebase_first_testing/views/screens/screen_utils/screen_utils_screen.dart';
 import 'package:firebase_first_testing/views/screens/splash_screen/chat_splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:ScreenUtilsScreen()
+        home:LoginAndLogout()
+        //ScreenUtilsScreen()
         //ChatSplashScreen(),
         //SignUp2(),
         //HomeScreenChat()
