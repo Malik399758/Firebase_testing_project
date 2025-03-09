@@ -5,7 +5,9 @@ import 'package:firebase_first_testing/views/screens/auth_module/sign_up2.dart';
 import 'package:firebase_first_testing/views/screens/chat_module/home_screen.dart';
 import 'package:firebase_first_testing/views/screens/login_logout/login_and_logout.dart';
 import 'package:firebase_first_testing/views/screens/screen_utils/screen_utils_screen.dart';
+import 'package:firebase_first_testing/views/screens/sign_in_with_google/sign_in_with_google_screen.dart';
 import 'package:firebase_first_testing/views/screens/splash_screen/chat_splash_screen.dart';
+import 'package:firebase_first_testing/views/screens/upload_image/upload_image_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -51,7 +53,9 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:LoginAndLogout()
+        home: SignInWithGoogleScreen()
+        //UploadImageScreen()
+        //LoginAndLogout()
         //ScreenUtilsScreen()
         //ChatSplashScreen(),
         //SignUp2(),

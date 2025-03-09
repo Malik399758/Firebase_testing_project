@@ -109,7 +109,6 @@ class _LoginAndLogoutState extends State<LoginAndLogout> {
                     ] )),
               ),
               // Lottie.asset('assets/images/Lottie Lego.json')
-              
             ],
           
           ),
